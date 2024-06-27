@@ -1,13 +1,26 @@
 <!-- <app-nested-component-1 /> -->
 <!-- <app-nested-component-2 /> -->
 
+<!--
+
+  [] ===> Informacion de padre a hijo (valor entrada)
+  () ===> Informacion de hijo a padre (eventos)
+  [()] ===> Informacion en doble sentido
+
+
+-->
+
+<button (click)="modalVisible = true" class="btn btn-primary">
+  Abrir modal
+</button>
+
 <h2>Empleados presentes:</h2>
 <app-empleados-lista
   (eliminarEmpleado)="eliminarEmpleado($event, 'empleadosPresentes')"
   [data]="empleadosPresentes"
 />
 
-<div class="m-5"></div>
+<div #myDiv class="m-5"></div>
 
 <!--
 $event ====> Representa los datos que envia EventEmitter desde el hijo mediante la funcion emit
@@ -18,6 +31,10 @@ $event ====> Representa los datos que envia EventEmitter desde el hijo mediante 
   (eliminarEmpleado)="eliminarEmpleado($event, 'empleadosAusentes')"
   [data]="empleadosAusentes"
 />
+
+<!-- <app-my-modal [visible]="modalVisible" (cerrarModal)="modalVisible = false" /> -->
+
+<app-my-modal [(visible)]="modalVisible" />
 
 <!-- PADRE / ABUELO -->
 <div>

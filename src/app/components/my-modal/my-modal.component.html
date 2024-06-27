@@ -1,0 +1,11 @@
+<div *ngIf="visible" class="my-modal-background">
+  <div class="card w-6">
+    <div class="card-body">
+      This is some text within a card body.
+
+      <button (click)="visibleChange.emit(false)" class="btn btn-danger">
+        Cerrar
+      </button>
+    </div>
+  </div>
+</div>
