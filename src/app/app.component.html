@@ -10,6 +10,72 @@
 
 -->
 
+<!-- <app-my-card /> -->
+
+<div class="container">
+  <div class="row">
+    <div *ngFor="let empleado of empleadosPresentes" class="col-2">
+      <app-my-card (verDetalle)="verDetalle($event)" [empleado]="empleado" />
+    </div>
+  </div>
+</div>
+
+<br />
+<br />
+<br />
+<br />
+<br />
+<br />
+<br />
+<br />
+<br />
+<br />
+
+<div class="container">
+  <div class="row g-3">
+    <div class="col-6">
+      <app-my-rounded-container>
+        <span class="my-title">Hello world!</span>
+        <span>Lo que sea</span>
+        Goku es el mas fuerte del universo
+      </app-my-rounded-container>
+    </div>
+    <div class="col-6">
+      <app-my-rounded-container>
+        <span>Hola mundo</span>
+        <p>El anime de Naruto tiene muchos capitulos de relleno</p>
+      </app-my-rounded-container>
+    </div>
+    <div class="col-6">
+      <app-my-rounded-container></app-my-rounded-container>
+    </div>
+    <div class="col-6">
+      <app-my-rounded-container></app-my-rounded-container>
+    </div>
+  </div>
+</div>
+
+<br />
+<br />
+<br />
+<br />
+<br />
+<br />
+<br />
+<br />
+<br />
+<br />
+<br />
+<br />
+<br />
+<br />
+<br />
+<br />
+<br />
+<br />
+<br />
+<br />
+
 <button (click)="modalVisible = true" class="btn btn-primary">
   Abrir modal
 </button>

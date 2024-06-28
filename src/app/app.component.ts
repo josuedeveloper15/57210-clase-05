@@ -28,6 +28,7 @@ export class AppComponent implements AfterViewInit {
       apellido: 'Diaz',
     },
   ];
+
   empleadosAusentes: Empleado[] = [
     {
       id: 10,
@@ -67,5 +68,9 @@ export class AppComponent implements AfterViewInit {
     }
 
     console.log('RECIBIMOS EL EVENTO eliminarEmpleado EN AppComponent');
+  }
+
+  verDetalle(ev: Empleado) {
+    alert(`Accediendo al detalle de ${ev.nombre} ${ev.apellido}`);
   }
 }
